@@ -1,0 +1,50 @@
+.container {
+  height: 40px;
+  width: 50px;
+  align-items: right;
+  align-content: right;
+  position: absolute;
+  top: 5%;
+  left: 0%;
+
+  cursor: pointer;
+
+  background-color: rgb(108, 197, 232);
+  color: white;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+  border-width: 0px;
+}
+
+.container button {
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 8px;
+  bottom: 0px;
+  right: 0px;
+  top: 5px;
+  border-radius: 100px;
+  border-width: 0px;
+}
+
+.container button:hover {
+  animation: rotate360 2s;
+}
+
+@keyframes rotate360 {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.container i {
+  font-size: 30px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+}

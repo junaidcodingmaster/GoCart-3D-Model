@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple GoCart Model Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+    <a-scene background="color:black;">
+        <a-assets>
+            <a-asset-item id="go-cart-mtl" src="./models/GoCart.mtl"></a-asset-item>
+            <a-asset-item id="go-cart-obj" src="./models/GoCart.obj"></a-asset-item>
+        </a-assets>
+
+        <a-camera position="0 1 3.5"></a-camera>
+
+
+        <a-entity light="type: spot; castShadow: true" position="0 4 5" rotation="-90 -20 20"></a-entity>
+
+        <a-entity light="type: spot; castShadow: true" position="0 4 -5" rotation="-90 -114 120"></a-entity>
+
+        <a-entity light="type: spot; castShadow: true" position="4 4 0" rotation="-90 0 0"></a-entity>
+
+        <a-entity light="type: spot; castShadow: true" position="-4 4 0" rotation="-80 -60 70"></a-entity>
+
+
+
+
+        <a-entity showcase>
+            <a-entity obj-model="obj: #go-cart-obj; mtl: #go-cart-mtl;" scale="0.012 0.015 0.015" rotation="270 0 0"
+                position="0 0.05 0" shadow="cast: true;"></a-entity>
+            <a-entity base></a-entity>
+        </a-entity>
+
+    </a-scene>
+
+    <div class="container">
+        <button id="animationTriggerSwitch" onclick="animationTriggerButtonHandler()"><i
+                class="fa fa-play-circle"></i></button>
+    </div>
+
+</body>
+
+</html>
